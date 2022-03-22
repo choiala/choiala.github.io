@@ -2,7 +2,7 @@ module.exports = {
   title: `choiala.log`,
   description: `최알라로그`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://www.choiala.com`,
+  siteUrl: `https://www.choiala.com`, // https://www.zoomkoding.com
   ogImage: `/chalhotteok.png`, // Path to your in the 'static' folder
   comments: {
     utterances: { //댓글용
