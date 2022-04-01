@@ -14,7 +14,7 @@ module.exports = {
     name: `최지영`,
     bio: {
       role: `개발자`,
-      description: ['아직 미정;;;'], //애니메이션 멈추기
+      description: ['데이터로 세상을 읽고싶은'], //애니메이션 멈추기
       thumbnail: 'chal.png', // Path to the image in the 'asset' folder
     },
     social: {

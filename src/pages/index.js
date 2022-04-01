@@ -1,9 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, about} from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/seo';
 import Bio from '../components/bio';
 import Post from '../models/post';
+import TimeStampSection from '../components/timestamp-section';
+import ProjectSection from '../components/project-section';
 
 import { getUniqueCategories } from '../utils/helpers';
 import PostTabs from '../components/post-tabs';
@@ -15,18 +17,14 @@ function HomePage({ data }) {
   const featuredTabIndex = categories.findIndex((category) => category === 'featured');
   const [tabIndex, setTabIndex] = useState(featuredTabIndex === -1 ? 0 : featuredTabIndex);
   const onTabIndexChange = useCallback((e, value) => setTabIndex(value), []);
+  const { timestamps, projects } = about;
 
   return (
-    <Layout>
+    <Layout>s
       <Seo title="Home" />
       <Bio author={author} language={language} />
-      <PostTabs
-        posts={posts}
-        onChange={onTabIndexChange}
-        tabs={categories}
-        tabIndex={tabIndex}
-        showMoreButton
-      />
+      <TimeStampSection timestamps={timestamps} />
+      <ProjectSection projects={projects} />
     </Layout>
   );
 }
@@ -68,7 +66,35 @@ export const pageQuery = graphql`
             email
           }
         }
+        about {
+          timestamps {
+            date
+            activity
+            links {
+              post
+              github
+              demo
+              googlePlay
+              appStore
+            }
+          }
+
+          projects {
+            title
+            description
+            techStack
+            thumbnailUrl
+            links {
+              post
+              github
+              demo
+              googlePlay
+              appStore
+            }
+          }
+        }
       }
     }
+    
   }
 `;
