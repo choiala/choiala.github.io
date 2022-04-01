@@ -14,8 +14,8 @@ module.exports = {
     name: `최지영`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는'], //애니메이션 멈추기
-      thumbnail: 'chalhotteok2.png', // Path to the image in the 'asset' folder
+      description: ['아직 미정;;;'], //애니메이션 멈추기
+      thumbnail: 'chal.png', // Path to the image in the 'asset' folder
     },
     social: {
       // 블로그랑 다른거로 바꾸는 법 찾아보기
