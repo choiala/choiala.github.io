@@ -3,7 +3,7 @@ module.exports = {
   description: `최알라로그`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://www.choiala.com`, // https://www.zoomkoding.com
-  ogImage: `/chalhotteok.png`, // Path to your in the 'static' folder
+  ogImage: `/chal.png`, // Path to your in the 'static' folder
   comments: {
     utterances: { //댓글용
       repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
@@ -14,7 +14,7 @@ module.exports = {
     name: `최지영`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
+      description: ['사람에 가치를 두는'], //애니메이션 멈추기
       thumbnail: 'chalhotteok2.png', // Path to the image in the 'asset' folder
     },
     social: {
